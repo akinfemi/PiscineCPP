@@ -16,24 +16,24 @@
 class Contact {
 
 public:
-	setFirstName(std::string firstName);
-	setLastName(std::string lastName);
-	setNickName(std::string nickName);
-	setLogin(std::string login);
-	setPostalAddress(std::string postalAddress);
-	setEmailAddress(std::string emailAddress);
-	setPhoneNumber(int phoneNumber);
-	setDOB(std::string dateOfBirth);
-	setFavoriteMeal(std::string favoriteMeal);
-	setUnderwearColor(std::string color);
-	setDarkestSecret(std::string secret);
+	void setFirstName(std::string firstName);
+	void setLastName(std::string lastName);
+	void setNickName(std::string nickName);
+	void setLogin(std::string login);
+	void setPostalAddress(std::string postalAddress);
+	void setEmailAddress(std::string emailAddress);
+	void setPhoneNumber(std::string phoneNumber);
+	void setDOB(std::string dateOfBirth);
+	void setFavoriteMeal(std::string favoriteMeal);
+	void setUnderwearColor(std::string color);
+	void setDarkestSecret(std::string secret);
 	std::string getFirstName();
 	std::string getLastName();
 	std::string getNickName();
 	std::string getLogin();
 	std::string getPostalAddress();
 	std::string getEmailAddress();
-	int getPhoneNumber();
+	std::string getPhoneNumber();
 	std::string getDOB();
 	std::string getFavoriteMeal();
 	std::string getUnderwearColor();
@@ -48,7 +48,7 @@ private:
 	std::string login;
 	std::string postalAddress;
 	std::string emailAddress;
-	int phoneNumber;
+	std::string phoneNumber;
 	std::string dateOfBirth;
 	std::string favoriteMeal;
 	std::string underwearColor;

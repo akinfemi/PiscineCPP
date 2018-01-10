@@ -44,7 +44,7 @@ void	Contact::setEmailAddress(std::string emailAddress)
 	this->emailAddress = emailAddress;
 }
 
-void	Contact::setPhoneNumber(int phoneNumber)
+void	Contact::setPhoneNumber(std::string phoneNumber)
 {
 	this->phoneNumber = phoneNumber;
 }
@@ -64,7 +64,7 @@ void	Contact::setUnderwearColor(std::string underwearColor)
 	this->underwearColor = underwearColor;
 }
 
-void	Contact::setSecret(std::string darkestSecret)
+void	Contact::setDarkestSecret(std::string darkestSecret)
 {
 	this->darkestSecret = darkestSecret;
 }
@@ -101,7 +101,7 @@ std::string	Contact::getEmailAddress()
 	return this->emailAddress;
 }
 
-int	Contact::getPhoneNumber()
+std::string	Contact::getPhoneNumber()
 {
 	return this->phoneNumber;
 }
@@ -121,7 +121,7 @@ std::string	Contact::getUnderwearColor()
 	return this->underwearColor;
 }
 
-std::string	Contact::getSecret()
+std::string	Contact::getDarkestSecret()
 {
 	return this->darkestSecret;
 }

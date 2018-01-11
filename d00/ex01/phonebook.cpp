@@ -24,6 +24,29 @@ static std::string read_and_error()
         exit(1);
     return buff;
 }
+
+static std::string read_index()
+{
+    std::string buff;
+    int flag = 0;
+
+    while(1)
+    {
+        std::cout << "Enter index: ";
+        std::getline(std::cin, buff);
+        if (std::cin.eof())
+            exit(1);
+        for (int i = 0; i < 8; i++)
+        {
+            if (std::to_string(i) == buff)
+                flag = 1;
+        }
+        if (flag == 1)
+            return buff;
+        std::cout << "Out of range" << std::endl;
+    }
+}
+
 static Contact new_contact()
 {
     Contact contact;
@@ -87,8 +110,8 @@ static void get_contact(Contact pb[8], int size)
 {
     std::string buff;
     int index;
-    std::cout << "Enter index: ";
-    buff = read_and_error();
+    
+    buff = read_index();
     index = std::stoi(buff);
     if (!(index < size))
         return;

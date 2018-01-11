@@ -10,9 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
-Zombie(std::string name)
+std::string name;
+std::string type;
+
+Zombie::Zombie(std::string name, std::string type)
 {
     std::cout << "Constructor called." << std::endl;
+    this->name = name;
+    this->type = type;
+    this->announce();
+}
+
+void        Zombie::announce(void)
+{
+    std::cout << "<" << this->name << "("
+    << this->type << ")> Braiiiiiinnnnssss..." << std::endl;
+}
+
+Zombie::~Zombie(void){
+    std::cout << "Destructor called" << std::endl;
 }
